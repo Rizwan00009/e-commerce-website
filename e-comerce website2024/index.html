@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ecomerce website 2024</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" charset="UTF-8"></script>
+    <link rel="stylesheet" href="style.css">
+    <style>
+      .halli{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 50px;
+}
+div{
+  position: relative;
+  height: min-content;
+}
+#simg{
+  width: 250px;
+  height: 350px;
+  object-fit: cover;
+  border: 10px double red;
+  box-shadow: 15px 15px 15px yellow;
+  position: relative;
+}
+.goes1, .goes2, .goes3, .goes4, .goes5{
+  box-sizing: border-box;
+  padding: 20px;
+  position: absolute;
+  display: block;
+  width: 100%; 
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: #00000050;
+  color: white;
+  text-align: center;
+  display: none;
+}
+#prgrph{
+  font-size: 18px;
+}
+#animt{
+            width: 0ch;
+            overflow: hidden;
+            white-space: nowrap;
+            animation: text 5s steps(25) infinite alternate;
+            font-size: 50px;
+        }
+        @keyframes text{
+
+            0%{
+                width: 0ch;
+            }
+            50%{
+                width: 25ch;
+            }
+        }
+        #effect{
+          width: 450px;
+          height: 350px;
+          border: 2px solid brown;
+          border-radius: 13px;
+          box-shadow: 4px 15px 15px 0px red;
+          cursor: pointer;
+          margin: 10px;transition: 400ms;
+        }
+        #effect:hover{
+          filter: grayscale(1);
+          transform: scale(1.05);
+        }
+        #affect{
+          width: 450px;
+          height: 350px;
+          border: 2px solid brown;
+          border-radius: 13px;
+          box-shadow: 4px 15px 15px 0px greenyellow;
+          cursor: pointer;
+          margin: 10px;transition: 400ms;
+        }
+        #affect:hover{
+          filter: grayscale(1);
+          transform: scale(1.05);
+        }
+        #sffect{
+          width: 450px;
+          height: 350px;
+          border: 2px solid brown;
+          border-radius: 13px;
+          box-shadow: 4px 15px 15px 0px yellow;
+          cursor: pointer;
+          margin: 10px;transition: 400ms;
+        }
+        #sffect:hover{
+          filter: grayscale(1);
+          transform: scale(1.05);
+        }
+        #imgstyle{
+          cursor: pointer;
+          transition: 400ms;
+        }
+        #imgstyle:hover{
+          filter: grayscale(1);
+          transform: scale(1.05);
+        }
+        .error {
+    color: red;
+  }
+
+  #contactForm {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    border: 3px solid black;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+
+  @keyframes slideInOut {
+    0%, 100% {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+    50% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+
+  .animate-heading {
+    animation: slideInOut 3s infinite alternate;
+  }
+
+  </style>
+  <script src="jquiry.js"></script>
+  <script>
+       $(document).ready(function(){
+          $(".img1").mouseenter(function(){
+              $(".goes1").slideDown(1000)
+          });
+          $(".img1").mouseleave(function(){
+              $(".goes1").fadeOut(1000)
+              $("img1").mouseenter(function(){
+              })
+          })
+          $(".img2").mouseenter(function(){
+              $(".goes2").slideDown(1000)
+          });
+
+          $(".img2").mouseleave(function(){
+              $(".goes2").fadeOut(1000)
+          })
+          $(".img3").mouseenter(function(){
+              $(".goes3").slideDown(1000)
+          });
+
+          $(".img3").mouseleave(function(){
+              $(".goes3").fadeOut(1000)
+          })
+          $(".img4").mouseenter(function(){
+              $(".goes4").slideDown(1000)
+          });
+
+          $(".img4").mouseleave(function(){
+              $(".goes4").fadeOut(1000)
+          })
+          $(".img5").mouseenter(function(){
+              $(".goes5").slideDown(1000)
+          });
+
+          $(".img5").mouseleave(function(){
+              $(".goes5").fadeOut(1000)
+          })
+      })
+      function validateForm(event) {
+      event.preventDefault();
+      
+      // Validation logic here
+      let firstname = document.getElementById('firstname').value.trim();
+      let lastname = document.getElementById('lastname').value.trim();
+      let email = document.getElementById('email').value.trim();
+      let password = document.getElementById('password').value.trim();
+      let city = document.getElementById('city').value.trim();
+      let phonenumber = document.getElementById('phonenumber').value.trim();
+      let address = document.getElementById('address').value.trim();
+      let zipcode = document.getElementById('zipcode').value.trim();
+      
+      let isValid = true;
+      
+      // Simple validation example (you can add more specific checks as needed)
+      if (firstname === '') {
+        isValid = false;
+        document.getElementById('firstname').classList.add('error');
+      } else {
+        document.getElementById('firstname').classList.remove('error');
+      }
+      
+      if (lastname === '') {
+        isValid = false;
+        document.getElementById('lastname').classList.add('error');
+      } else {
+        document.getElementById('lastname').classList.remove('error');
+      }
+      
+      if (email === '' || !isValidEmail(email)) {
+        isValid = false;
+        document.getElementById('email').classList.add('error');
+      } else {
+        document.getElementById('email').classList.remove('error');
+      }
+      
+      // Add similar checks for other fields
+      
+      if (isValid) {
+        // Form submission logic (e.g., AJAX request or form submission)
+        alert('Form submitted successfully!');
+        document.getElementById('contactForm').reset(); // Reset the form after submission
+      } else {
+        alert('Please fill in all required fields correctly.');
+      }
+    }
+    
+    function isValidEmail(email) {
+      // Basic email validation
+      return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+    }
+     
+  </script>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg p-1 fixed-top bg-danger">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#"><img src="logo2.png" height="45px" width="45px" style="border-radius: 5px;"></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#home"><i class="bi bi-house-down-fill"></i> <b>Home</b></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="#about"><i class="bi bi-file-earmark-person-fill"></i> <b>About</b></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="#gallary"><i class="bi bi-backpack2-fill"></i> <b>Gallary</b></a>
+                <li class="nav-item">
+                  <li class="nav-item">
+                    <a class="nav-link active" href="#services"><i class="bi bi-brilliance"></i> <b> Services</b></a>
+                    <li class="nav-item">
+                    <a class="nav-link active" href="#type"><i class="bi bi-browser-edge"></i> <b>Types</b></a>
+                  </li>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="#contact"><i class="bi bi-person-lines-fill"></i> <b>Contact us</b></a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-success" type="submit"><b>Search</b></button>
+            </form>
+          </div>
+        </div>
+      </nav>
+      <section id="home">
+        <div id="carouselExampleDark" class="carousel carousel-fade">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active" data-bs-interval="10000">
+              <img src="slide1.jpg" class="d-block w-100" alt="..." height="500px">
+              <div class="carousel-caption d-none d-md-block">
+                <h1 class="text-info">"Discover Alpine Ascents"</h1>
+                <p class="text-light"><b>"wellcome to alpine ascents where passion meets experties in mountaineering embarak on a journey with us to explor the world most breathtaking peaks wheather youre a novice or seasoned climber "</b></p>
+                <div class="spinner-grow text-success" role="status">
+                  <span class="visually-hidden">Loading...</span>
+                </div>
+                <div class="spinner-grow text-danger" role="status">
+                  <span class="visually-hidden">Loading...</span>
+                </div>
+                <div class="spinner-grow text-warning" role="status">
+                  <span class="visually-hidden">Loading...</span>
+                </div>
+                <div class="spinner-grow text-info" role="status">
+                  <span class="visually-hidden">Loading...</span>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item" data-bs-interval="2000">
+              <img src="slide2.webp" class="d-block w-100" alt="..." height="500px">
+              <div class="carousel-caption d-none d-md-block">
+                <h1 class="text-warning">"Explor Our Expeditions"</h1>
+                <p class="text-light"><b>"Dive into our diverse range of expedition tailored for every adventure from iconic summits like everest to remote alphine landscape our meticulously planed trips cater to all skill lavel join us "</b></p>
+                <div class="spinner-grow text-success" role="status">
+                  <span class="visually-hidden">Loading...</span>
+                </div>
+                <div class="spinner-grow text-danger" role="status">
+                  <span class="visually-hidden">Loading...</span>
+                </div>
+                <div class="spinner-grow text-warning" role="status">
+                  <span class="visually-hidden">Loading...</span>
+                </div>
+                <div class="spinner-grow text-info" role="status">
+                  <span class="visually-hidden">Loading...</span>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img src="slide3.jpg" class="d-block w-100" alt="..." height="500px">
+              <div class="carousel-caption d-none d-md-block">
+                <h1 class="text-info">"Learn From Our Experts"</h1>
+                <p class="text-light"><b>"Gain invaluable insights and skills from our team of seasoned mountainer and guiodes wheather you are honing your climing technique or preparing for an expedition our expert-led courses and resources"</b></p>
+                
+                <div class="spinner-grow text-success" role="status">
+                  <span class="visually-hidden">Loading...</span>
+                </div>
+                <div class="spinner-grow text-danger" role="status">
+                  <span class="visually-hidden">Loading...</span>
+                </div>
+                <div class="spinner-grow text-warning" role="status">
+                  <span class="visually-hidden">Loading...</span>
+                </div>
+                <div class="spinner-grow text-info" role="status">
+                  <span class="visually-hidden">Loading...</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </section>
+      <section id="about"> 
+      <h1 class="text-center" my-5 style="color:black;"><b><u><i>ABOUT US</i></u></b></h1>
+      <hr>
+        <div class="container marketing ">
+          <div class="row featurette">
+            <div class="col-md-7">
+              <h1 class="featurette-heading fw-normal lh-1 text-primary" id="animt">Our Lagacy Of Excellence</h1>
+              <p class="lead my-3">Since its inception in [year], Alpine Ascents International has stood as a beacon of excellence in the realm of mountaineering and outdoor education. With a rich history spanning decades, we have consistently upheld the highest standards of safety, professionalism, and environmental stewardship. Our legacy is built on a foundation of passion for the mountains and a commitment to sharing the transformative power of the alpine experience with adventurers worldwide Mountaineering, or mountain climbing, is the sport of reaching, or trying to reach.Mountaineering, or mountain climbing, is the sport of reaching, or trying to reach, high points in mountainous areas, mainly for the joy and thrill of the climb.</p>
+            </div>
+            <div class="col-md-5">
+            <img id="effect" class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="700" height="700" src="about1.webp">
+            </div>
+          </div>
+          <hr>
+          <div class="row featurette">
+            <div class="col-md-7 order-md-2">
+              <h1 class="featurette-heading fw-normal lh-1 text-success" id="animt">Commitement To Safety</h1>
+              <p class="lead my-3">At Alpine Ascents International, safety is our foremost priority. We adhere to stringent safety protocols and guidelines established by industry leaders and regulatory bodies. Our team of seasoned guides undergoes rigorous training and certification to ensure every expedition is conducted with the utmost caution and preparedness. Whether you're embarking on your first climb or seeking a new challenge, you can trust us to prioritize your well-being every step of the way Mountaineering, or mountain climbing, is the sport of reaching, or trying to reach, high points in mountainous areas, mainly for the joy and thrill of the climb. The sport involves intense physical activity. It includes hiking, rock climbing.</p>
+            </div>
+            <div class="col-md-5 order-md-1">
+              <img id="affect" class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="700" height="750" src="about2.webp">  
+            </div>
+          </div>
+          <hr>
+          <div class="container my-4">
+            <div class="row featurette">
+              <div class="col-md-7">
+                <h1 class="featurette-heading fw-normal lh-1 text-warning" id="animt">Environmental Stewardship</h1>
+                <p class="lead my-3">As stewards of the natural world, Alpine Ascents International is deeply committed to preserving the environments we explore. We actively promote Leave No Trace principles and advocate for sustainable practices within the outdoor industry. Through partnerships with conservation organizations and community initiatives, we strive to minimize our ecological footprint and ensure future generations can continue to enjoy the beauty of our planet's wildest places Mountaineering, or mountain climbing, is the sport of reaching, or trying to reach, high points in mountainous areas, mainly for the joy and thrill of the climb. The sport involves intense physical activity. It includes hiking.</p>
+              </div>
+              <div class="col-md-5">
+                <img id="sffect" class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="600" height="600" src="about3.webp"> 
+              </div>
+            </div>
+        </div>
+        <hr>
+  </section>
+  <h1 class="text-center" my-0 style="color:black;"><b><u><i id="animt">GALLARY</i></u></b></h1>
+  <h2 style="text-align: center; color: blue;"><marquee direction="right">Alpine Ascents International | 109 W. Mercer St. - Seattle, WA 98119 | phone: 206.378.1927 | Climb@AlpineAscents.com</marquee> </h2>
+  <section id="gallary">
+  <div class="container text-center">
+    <div class="row">
+      <div class="col">
+        <div class="halli">
+          <div class="">
+              <img class="img1" id="simg" src="gallary1.webp" alt="">
+              <div class="goes1">
+                  <h1>Base Camp Life</h1>
+                  <p id="prgrph">See the power of nature through photos of extreme weather encountered on expeditions. From blizzards to clear blue skies, these images unpredictable conditions.</p>
+              </div>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="halli">
+          <div class="">
+        <img class="img2" id="simg" src="gallary2.jpg" alt="">
+    <div class="goes2">
+        <h1>Sunrise and Sunset</h1>
+        <p id="prgrph">Marvel at the stunning colors and play of light during sunrise and sunset at high altitudes. These images convey the ethereal beauty and tranquility experienced by climbers at dawn & dusk.</p>
+    </div>
+    </div>
+    </div>
+      </div>
+      <div class="col">
+        <div class="halli">
+          <div class="">
+        <img class="img3" id="simg" src="gallary3.webp" alt="">
+        <div class="goes3">
+            <h1>Training and Prepration</h1>
+            <p id="prgrph">Follow the journey of preparation leading up to expeditions. These images capture  planning routes  mentally and physically for the challenges</p>
+        </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container text-center">
+    <div class="row">
+      <div class="col">
+        <div class="halli">
+          <div class="">
+              <img class="img1" id="simg" src="gallary4.jpg" alt="">
+              <div class="goes1">
+                  <h1>Alphine landscape</h1>
+                  <p id="prgrph">Immerse yourself in the dramatic and rugged landscapes Alpine Ascents explores. From towering peaks to vast valleys, these photos convey the grandeur and scale of mountainous terrain</p>
+              </div>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="halli">
+          <div class="">
+        <img class="img2" id="simg" src="gallary5.jpg" alt="">
+    <div class="goes2">
+        <h1>Team Dynamics</h1>
+        <p id="prgrph">Witness the teamwork and support essential for successful climbs. These images capture moments of collaboration, encouragement, and celebration among team members</p>
+    </div>
+    </div>
+    </div>
+      </div>
+      <div class="col">
+        <div class="halli">
+          <div class="">
+        <img class="img3 " id="simg" src="gallary8.jpg" alt="">
+        <div class="goes3">
+            <h1>Historic Expedition</h1>
+            <p id="prgrph">Explore the legacy of past Alpine Ascents expeditions. These photos pay homage to pioneering climbers and historic achievements in mountaineering</p>
+        </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+    </div>
+  </div>
+  <iframe class="my-1" width="100%" height="430px" src="https://www.youtube.com/embed/99ryMHWuhtM?si=Aujz_XFJlcu30tVf" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>  
+      </section>
+      <h1 class="text-center my-0" style="color:black; font-family: Arial, Helvetica, sans-serif;"><b><u><i id="animt"> SERVICES</i></u></b></h1><br>
+      <section id="services">
+        <h1 class="text-center" my-0 style="color:black;"><b><u><i id="animt"> l</i></u></b></h1><br>
+        <div class="wrapper">
+        <div class="team">
+        <div class="team_member">
+          <div class="team_img">
+          <img src="service4.jpeg" alt="team_member_image"> 
+          </div>
+        <h3><b>Reinhold Messner</b></h3>
+        <p class="role">September 17, 1944</p>
+        <p>Reinhold Messner, born on September 17, 1944, in the Italian province of South Tyrol, is renowned as one of the greatest mountaineers of all time. His remarkable career groundbreaking ascents, including being the first person to climb all fourteen peaks over 8,000 meters (known as the Eight-thousanders) without supplemental oxygen.</p>
+        <figure class="wp-block-image size-full is-resized"><img src="https://alpineclub.org.pk/wp-content/themes/blockbooster/assets/images/rating_star.png" data-src="https://alpineclub.org.pk/wp-content/themes/blockbooster/assets/images/rating_star.png" alt="" class="wp-image-4435 lazy loaded" style="width:94px" data-was-processed="true"></figure>
+        </div> 
+        <div class="team_member">
+          <div class="team_img">
+            <img src="services5.jpeg" alt="team_member_image">  
+            </div>
+          <h3><b>Walter Bonatti</b></h3>
+          <p class="role">June 22, 1930</p>
+          <p>Walter Bonatti, born on June 22, 1930, in Bergamo, Italy, was a celebrated Italian mountaineer known for his daring ascents and contributions to alpinism. He gained  ascent of a new route on the south-west pillar of the Dru in the French Alps in 1955, a climb that pushed the boundaries of what was thought possible at the time.</p>
+          <figure class="wp-block-image size-full is-resized"><img src="https://alpineclub.org.pk/wp-content/themes/blockbooster/assets/images/rating_star.png" data-src="https://alpineclub.org.pk/wp-content/themes/blockbooster/assets/images/rating_star.png" alt="" class="wp-image-4435 lazy loaded" style="width:94px" data-was-processed="true"></figure>
+          </div> 
+          <div class="team_member">
+            <div class="team_img">
+              <img src="services6.jpeg" alt="team_member_image">  
+              </div>
+            <h3><b>Alex Honnold</b></h3>
+            <p class="role">August 17, 1985</p>
+            <p>Alex Honnold, born on August 17, 1985, in Sacramento, California, is a renowned American rock climber known for his extraordinary feats of free solo climbing. Free soloing involves climbing without ropes, harnesses, or protective equipment, relying solely on the climber's skill, strength, and mental focus.As of my last update in January 2022.</p>
+            <figure class="wp-block-image size-full is-resized"><img src="https://alpineclub.org.pk/wp-content/themes/blockbooster/assets/images/rating_star.png" data-src="https://alpineclub.org.pk/wp-content/themes/blockbooster/assets/images/rating_star.png" alt="" class="wp-image-4435 lazy loaded" style="width:94px" data-was-processed="true"></figure>
+            </div> 
+        </div>  
+        </div>
+      </section>
+      <section id="type">
+        <h1 class="text-center" my-0 style="color:black;"><b><u><i id="animt">TYPES</i></u></b></h1>
+        <div class="album py-5 bg-dark">
+          <div class="container">
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+              <div class="col">
+                <div class="card shadow-sm">
+                  <img id="imgstyle" class="bd-placeholder-img card-img-top" width="100%" height="225" x="50%" y="50%" src="type1.jpeg">
+                  <div class="card-body">
+                    <h2>Atlas Mountain</h2>
+                    <p class="card-text">The Atlas Mountains are a mountain range in the Maghreb in North Africa. around 2,500 km (1,600 mi) through Morocco.</p>
+                    <div class="d-flex justify-content-between align-items-center">
+                      <div class="btn-group">
+                        <button type="button" class="btn btn-lg btn-success">follow</button>
+                        <figure class="wp-block-image size-full is-resized"><img src="https://alpineclub.org.pk/wp-content/themes/blockbooster/assets/images/rating_star.png" data-src="https://alpineclub.org.pk/wp-content/themes/blockbooster/assets/images/rating_star.png" alt="" class="wp-image-4435 lazy loaded" style="width:94px" data-was-processed="true"></figure>
+                      </div>
+                      <small class="text-body-secondary">3 mins</small>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card shadow-sm">
+                  <img id="imgstyle" class="bd-placeholder-img card-img-top" width="100%" height="225" x="50%" y="50%" src="type2.webp">
+                  <div class="card-body">
+                    <h2>Himalaya pahaad</h2>
+                    <p class="card-text">The Himalayas is the highest mountain range in the world, and has 9 out of 10 of the world's highest peaks. </p>
+                    <div class="d-flex justify-content-between align-items-center">
+                      <div class="btn-group">
+                        <button type="button" class="btn btn-lg btn-warning">follow</button>
+                        <figure class="wp-block-image size-full is-resized"><img src="https://alpineclub.org.pk/wp-content/themes/blockbooster/assets/images/rating_star.png" data-src="https://alpineclub.org.pk/wp-content/themes/blockbooster/assets/images/rating_star.png" alt="" class="wp-image-4435 lazy loaded" style="width:94px" data-was-processed="true"></figure>
+                      </div>
+                      <small class="text-body-secondary">5 mins</small>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card shadow-sm">
+                  <img id="imgstyle" class="bd-placeholder-img card-img-top" width="100%" height="225" x="50%" y="50%" src="type3.jpg">
+                  <div class="card-body">
+                    <h2>Rocky mountain</h2>
+                    <p class="card-text">The Rocky Mountains are massive mountain ranges that stretch from Canada to central New Mexico.</p>
+                    <div class="d-flex justify-content-between align-items-center">
+                      <div class="btn-group">
+                        <button type="button" class="btn btn-lg btn-primary">follow</button>
+                        <figure class="wp-block-image size-full is-resized"><img src="https://alpineclub.org.pk/wp-content/themes/blockbooster/assets/images/rating_star.png" data-src="https://alpineclub.org.pk/wp-content/themes/blockbooster/assets/images/rating_star.png" alt="" class="wp-image-4435 lazy loaded" style="width:94px" data-was-processed="true"></figure>
+                      </div>
+                      <small class="text-body-secondary">10 mins</small>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card shadow-sm">
+                  <img id="imgstyle" class="bd-placeholder-img card-img-top" width="100%" height="225" x="50%" y="50%" src="type4.jpg">
+                  <div class="card-body">
+                    <h2>Andes mountain</h2>
+                    <p class="card-text">The Andes Mountains are a vast and beautiful mountain range that runs along the entire western coast of South America.</p>
+                    <div class="d-flex justify-content-between align-items-center">
+                      <div class="btn-group">
+                        <button type="button" class="btn btn-lg btn-info">Explore More</button>
+                        <figure class="wp-block-image size-full is-resized"><img src="https://alpineclub.org.pk/wp-content/themes/blockbooster/assets/images/rating_star.png" data-src="https://alpineclub.org.pk/wp-content/themes/blockbooster/assets/images/rating_star.png" alt="" class="wp-image-4435 lazy loaded" style="width:94px" data-was-processed="true"></figure>
+                      </div>
+                      <small class="text-body-secondary">8 mins</small>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card shadow-sm">
+                  <img id="imgstyle" class="bd-placeholder-img card-img-top" width="100%" height="225" x="50%" y="50%" src="type5 (2).jpeg">
+                  <div class="card-body">
+                    <h2>Ridge mountain</h2>
+                    <p class="card-text">A ridge or a mountain ridge is a geographical feature consisting of a chain of mountains or hills that form a continuous elevated crest.</p>
+                    <div class="d-flex justify-content-between align-items-center">
+                      <div class="btn-group">
+                        <button type="button" class="btn btn-lg btn-warning">Explore More</button>
+                        <figure class="wp-block-image size-full is-resized"><img src="https://alpineclub.org.pk/wp-content/themes/blockbooster/assets/images/rating_star.png" data-src="https://alpineclub.org.pk/wp-content/themes/blockbooster/assets/images/rating_star.png" alt="" class="wp-image-4435 lazy loaded" style="width:94px" data-was-processed="true"></figure>
+                      </div>
+                      <small class="text-body-secondary">9 mins</small>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card shadow-sm">
+                  <img id="imgstyle" class="bd-placeholder-img card-img-top" width="100%" height="225" x="50%" y="50%" src="type5.jpeg">
+                  <div class="card-body">
+                    <h2>Dome mountain </h2>
+                    <p class="card-text">Dome Mountains are formed from hot molten material (magma) rising from the Earth's mantle into the crust that pushes overlying</p>
+                    <div class="d-flex justify-content-between align-items-center">
+                      <div class="btn-group">
+                        <button type="button" class="btn btn-lg btn-danger">Explore More</button>
+                        <figure class="wp-block-image size-full is-resized"><img src="https://alpineclub.org.pk/wp-content/themes/blockbooster/assets/images/rating_star.png" data-src="https://alpineclub.org.pk/wp-content/themes/blockbooster/assets/images/rating_star.png" alt="" class="wp-image-4435 lazy loaded" style="width:94px" data-was-processed="true"></figure>
+                      </div>
+                      <small class="text-body-secondary">6 mins</small>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="contact">
+        <h1 class="text-center text-warning bg-dark" my-0><b><u><i id="animt"> CONTACT US</i></u></b></h1><br>
+        <div class="container text-center ">
+          <div class="row">
+            <div class="col">
+              <form id="contactForm" onsubmit="validateForm(event)">
+                <h2 class="animate-heading text-info">Reach Out to Us</h2>
+            <label for="firstname"><b>First Name:</b></label>
+                <input type="text" id="firstname" name="firstname" required><br><br>
+                
+             <label for="lastname"><b>Last Name:</b></label>
+                <input type="text" id="lastname" name="lastname" required><br><br>
+                
+                <label for="email"><b>Email:</b></label>
+                <input type="email" id="email" name="email" required><br><br>
+                
+            <label for="password"><b>Password:</b></label>
+                <input type="password" id="password" name="password" required><br><br>
+                
+                <label for="city"><b>City:</b></label>
+                <input type="text" id="city" name="city" required><br><br>
+                
+         <label for="phonenumber"><b>Phone Number:</b></label>
+                <input type="tel" id="phonenumber" name="phonenumber" required><br><br>
+                
+             <label for="address"><b>Address:</b></label>
+                <textarea id="address" name="address" required></textarea><br><br>
+                
+             <label for="zipcode"><b>Zip Code:</b></label>
+                <input type="text" id="zipcode" name="zipcode" required><br><br>
+            <button style="border-radius: 10px solid black;" class="bg-info" type="submit"><b>Submit</b></button>
+              </form>
+            </div>
+            <div class="col">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14481.52319616173!2d67.02593778465577!3d24.85084060000001!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3eb33e75a28531d1%3A0x412558657f5ff4a8!2sGovernor%20House%20Sindh!5e0!3m2!1sen!2s!4v1719734718606!5m2!1sen!2s" width="600" height="580" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+          </div>
+        </div>
+      </section>
+      <footer style="border-radius: 15px;">      
+        <div class="container text-center my-1">
+            <div class="row">
+              <div class="col">
+            <h2 id="hght" style="color: goldenrod;"><b>Get in Touch</b></h2>
+            <p id="p1" style="color: white;"><i class="bi bi-amd"></i> 101 xyz Colony,xyz city in krchi k2</p>
+            <p id="p1" style="color: white;"><i class="bi bi-envelope-arrow-down-fill"></i> alphioneascent25123@gmail.com</p>
+            <p id="p1" style="color: white;"><i class="bi bi-telephone-x-fill"></i> +91-9876543206785946748++</p>
+            <a href="#"><img src="f1.png" height="45px" width="70px" style="border-radius: 20px;"></a>
+            <a href="#"><img src="twetwr1.png" height="50px" width="70px"></a>
+            <a href="#"><img src="insta1.webp" height="50px" width="75px" style="border-radius: 20px;"></a>
+              </div>
+              <div class="col">
+                <div class="primary my-5 p-1" style=" border: 5px solid red; border-radius: 5px; margin-right: 30px; display: inline-block;" >
+                <a href="#"><img src="adres1.png" height="50px" width="50px" style="display: inline-block; border-radius: 5px;"></a>
+                <p id="p1" style="color: white;">disable.com.example</p>
+                </div>
+                <div class="secondary my-5 p-1" style=" border: 5px solid red; border-radius: 5px; margin-left: 35px; display: inline-block;">
+                <a href="#"><img src="bank1.png" height="50px" width="50px" style="display: inline-block; border-radius: 5px;"></a>
+                <p id="p1" style="color: white;">contact.@gmail.com</p>
+                </div>
+              </div>
+            </div>
+          </div>
+      </footer>
+</body>
+</html>
